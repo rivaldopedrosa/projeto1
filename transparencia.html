@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contratos de Gestão e Prestação de Contas</title>
+  <style>
+    :root {
+      --cor-primaria: #0b5d7a;
+      --cor-primaria-escura: #083f55;
+      --cor-destaque: #14a3a8;
+      --cor-fundo: #f1f5f9;
+      --cor-cartao: #ffffff;
+      --cor-texto: #1e293b;
+      --cor-texto-suave: #64748b;
+      --cor-borda: #e2e8f0;
+      --raio: 14px;
+      --sombra: 0 1px 3px rgba(15, 23, 42, 0.08), 0 8px 24px rgba(15, 23, 42, 0.06);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: "Segoe UI", system-ui, -apple-system, Roboto, Arial, sans-serif;
+      line-height: 1.5;
+      color: var(--cor-texto);
+      background: var(--cor-fundo);
+    }
+
+    .topo {
+      background: linear-gradient(135deg, var(--cor-primaria-escura), var(--cor-primaria) 60%, var(--cor-destaque));
+      color: #fff;
+      padding: 3rem 1.25rem 4.5rem;
+      text-align: center;
+    }
+    .topo h1 { margin: 0 0 .5rem; font-size: clamp(1.5rem, 4vw, 2.25rem); letter-spacing: .01em; }
+    .topo p  { margin: 0; opacity: .9; }
+
+    .container {
+      max-width: 1100px;
+      margin: -3rem auto 3rem;
+      padding: 0 1.25rem;
+    }
+
+    .grade {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .cartao {
+      background: var(--cor-cartao);
+      border-radius: var(--raio);
+      box-shadow: var(--sombra);
+      overflow: hidden;
+      border-top: 5px solid var(--cor-destaque);
+    }
+
+    .cartao h2 {
+      margin: 0;
+      padding: 1.1rem 1.4rem;
+      font-size: 1rem;
+      font-weight: 700;
+      letter-spacing: .03em;
+      color: var(--cor-primaria-escura);
+      background: #eaf5f7;
+      border-bottom: 1px solid var(--cor-borda);
+    }
+
+    .cartao ul { list-style: none; margin: 0; padding: .5rem; }
+
+    .cartao li {
+      display: flex;
+      align-items: center;
+      gap: .6rem;
+      padding: .7rem .9rem;
+      border-radius: 10px;
+      font-size: .9rem;
+      font-weight: 500;
+    }
+
+    .cartao li::before {
+      content: "";
+      flex: none;
+      width: .5rem;
+      height: .5rem;
+      border-radius: 50%;
+      background: var(--cor-destaque);
+    }
+
+    .cartao li.sem-link { color: var(--cor-texto-suave); }
+    .cartao li.sem-link::before { background: var(--cor-borda); }
+
+    .cartao li a {
+      flex: 1;
+      color: var(--cor-primaria);
+      text-decoration: none;
+      transition: color .2s ease, transform .2s ease;
+    }
+    .cartao li a::after {
+      content: " \2197";
+      font-size: .8em;
+      opacity: 0;
+      transition: opacity .2s ease;
+    }
+
+    .cartao li:has(a) { transition: background-color .2s ease, box-shadow .2s ease; }
+    .cartao li:has(a):hover {
+      background: #eaf5f7;
+      box-shadow: inset 3px 0 0 var(--cor-destaque);
+    }
+    .cartao li a:hover,
+    .cartao li a:focus-visible {
+      color: var(--cor-primaria-escura);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      transform: translateX(3px);
+    }
+    .cartao li a:hover::after,
+    .cartao li a:focus-visible::after { opacity: 1; }
+    .cartao li a:focus-visible { outline: 2px solid var(--cor-destaque); outline-offset: 3px; border-radius: 4px; }
+
+    .painel {
+      margin-top: 2.5rem;
+      background: var(--cor-cartao);
+      border-radius: var(--raio);
+      box-shadow: var(--sombra);
+      padding: 1.5rem;
+    }
+    .painel h2 { margin: 0 0 1rem; font-size: 1.15rem; color: var(--cor-primaria-escura); }
+    .painel iframe {
+      display: block;
+      width: 100%;
+      height: 600px;
+      border: 0;
+      border-radius: 10px;
+      background: var(--cor-fundo);
+    }
+
+    @media (max-width: 480px) {
+      .grade { grid-template-columns: 1fr; }
+      .painel iframe { height: 420px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="topo">
+    <h1>Contratos de Gestão e Prestação de Contas</h1>
+    <p>Documentos, relatórios e controles das unidades de saúde</p>
+  </header>
+
+  <main class="container">
+    <div class="grade">
+
+      <section class="cartao" aria-labelledby="hmdjmp">
+        <h2 id="hmdjmp">HOSPITAL METROPOLITANO DOM JOSÉ MARIA PIRES - HMDJMP</h2>
+        <ul>
+          <li class="sem-link">TERMO DE CONVOCAÇÃO</li>
+          <li><a href="resolveuid/baa6379a30bd47b383e4a14ed382c53f">PLANO DE TRABALHO</a></li>
+          <li><a href="resolveuid/24c0bc99470b410987a08fb1021bf46a">CONTRATO DE GESTÃO Nº 0172/2026 (VIGENTE)</a></li>
+          <li><a href="resolveuid/7e613ce1121a4077961cfbb986dbed93">CONTRATO DE GESTÃO Nº 078/2021</a></li>
+          <li><a href="resolveuid/5abfbb4ff8a8441a9f3c1176d2f0b9c0">CONTRATO DE GESTÃO Nº 002/2023</a></li>
+          <li><a href="resolveuid/6b79e04900f64a8793eef3e427e77516">ADITIVO AO CONTRATO DE GESTÃO Nº 002/2023</a></li>
+          <li><a href="prestacao-de-contas/relatorio-de-gestao#rghmdjmp">RELATÓRIOS DE GESTÃO</a></li>
+          <li><a href="resolveuid/6c8b596d244d446da2e68fa4633c007a">RELATÓRIO DE ANÁLISE MENSAL DO CONTRATO DE GESTÃO</a></li>
+          <li><a href="https://drive.google.com/file/d/1GQuI_LlWoG5IoyrAYmCQwQudnrrTxKd4/view?usp=sharing">CONTROLE DE TERCEIRIZADOS</a></li>
+        </ul>
+      </section>
+
+      <section class="cartao" aria-labelledby="hemodinamica">
+        <h2 id="hemodinamica">SERVIÇOS DE HEMODINÂMICA</h2>
+        <ul>
+          <li class="sem-link">TERMO DE CONVOCAÇÃO</li>
+          <li><a href="resolveuid/3aa95126fc3d4e329d3b3f1b235c8f69">PLANO DE TRABALHO</a></li>
+          <li><a href="resolveuid/0ddcdfa62fce442cb025157991c494ca">CONTRATO DE GESTÃO Nº 043/2023</a></li>
+          <li><a href="resolveuid/1e87b18f866346f0a47618ec0cdedc1a">ADITIVO AO CONTRATO DE GESTÃO Nº 043/2023 (VIGENTE)</a></li>
+          <li><a href="prestacao-de-contas/relatorio-de-gestao#rghcg">RELATÓRIOS DE GESTÃO (HEMODINÂMICA DE CAMPINA GRANDE)</a></li>
+          <li><a href="prestacao-de-contas/relatorio-de-gestao#rghp">RELATÓRIOS DE GESTÃO (HEMODINÂMICA DE PATOS)</a></li>
+          <li><a href="resolveuid/6c8b596d244d446da2e68fa4633c007a#relatseshemo">RELATÓRIO DE ANÁLISE MENSAL DO CONTRATO DE GESTÃO</a></li>
+          <li><a href="https://drive.google.com/file/d/1HFfvnWSft_OvXZ6MR7FRjyvOL5-6Nlfd/view?usp=sharing">CONTROLE DE TERCEIRIZADOS (HEMODINÂMICA DE CAMPINA GRANDE)</a></li>
+          <li><a href="https://drive.google.com/file/d/1FX-rPNKC5qbb3cVo3H7LUAx7G7hnvW1J/view?usp=sharing">CONTROLE DE TERCEIRIZADOS (HEMODINÂMICA DE PATOS)</a></li>
+        </ul>
+      </section>
+
+      <section class="cartao" aria-labelledby="hsger">
+        <h2 id="hsger">HOSPITAL DO SERVIDOR GENERAL EDSON RAMALHO - HSGER</h2>
+        <ul>
+          <li class="sem-link">TERMO DE CONVOCAÇÃO</li>
+          <li><a href="resolveuid/efb1ea02accf49f295cf9a4566f7afda">PLANO DE TRABALHO</a></li>
+          <li><a href="resolveuid/ec3b2f1578f64dc8a10ca9b11fa42a88">CONTRATO DE GESTÃO Nº 0199/2023 (VIGENTE)</a></li>
+          <li><a href="resolveuid/4ae0f63b0ec9475191b7a57ec2ec581a">ADITIVO VIGENTE</a></li>
+          <li><a href="prestacao-de-contas/relatorio-de-gestao#rghsger">RELATÓRIOS DE GESTÃO</a></li>
+          <li><a href="resolveuid/6c8b596d244d446da2e68fa4633c007a#relatseshsger">RELATÓRIO DE ANÁLISE MENSAL DO CONTRATO DE GESTÃO</a></li>
+          <li><a href="https://drive.google.com/file/d/1Fb9sovPkzpvJ2pMetwWOKvPUQ3F2jGLW/view?usp=sharing">CONTROLE DE TERCEIRIZADOS</a></li>
+        </ul>
+      </section>
+
+      <section class="cartao" aria-labelledby="hrg">
+        <h2 id="hrg">HOSPITAL REGIONAL DE GUARABIRA - HRG</h2>
+        <ul>
+          <li class="sem-link">TERMO DE CONVOCAÇÃO</li>
+          <li><a href="resolveuid/dd13a37cdd054629b56aec45109cfc6a">PLANO DE TRABALHO</a></li>
+          <li><a href="resolveuid/9fa0afe211bf4f7b8b7edee33e903793">CONTRATO DE GESTÃO Nº 0289/2024 (VIGENTE)</a></li>
+          <li><a href="prestacao-de-contas/relatorio-de-gestao#rghrg">RELATÓRIOS DE GESTÃO</a></li>
+          <li><a href="resolveuid/6c8b596d244d446da2e68fa4633c007a#relatseshrg">RELATÓRIO DE ANÁLISE MENSAL DO CONTRATO DE GESTÃO</a></li>
+          <li><a href="https://drive.google.com/file/d/1G-SZ0L2-hcumGAWlT5-8cmbErju91evW/view?usp=sharing">CONTROLE DE TERCEIRIZADOS</a></li>
+        </ul>
+      </section>
+
+      <section class="cartao" aria-labelledby="poinsp">
+        <h2 id="poinsp">POLICLÍNICA INTEGRADA DE SEGURANÇA PÚBLICA - POINSP</h2>
+        <ul>
+          <li class="sem-link">TERMO DE CONVOCAÇÃO</li>
+          <li><a href="resolveuid/e3b25a308f834a22b7200b417ba4b1a3">PLANO DE TRABALHO</a></li>
+          <li><a href="resolveuid/b33574be9f3e493dbffd67f52b67a058">CONTRATO DE GESTÃO Nº 0011/2024 (VIGENTE)</a></li>
+          <li><a href="prestacao-de-contas/relatorio-de-gestao#rgpoinsp">RELATÓRIOS DE GESTÃO</a></li>
+        </ul>
+      </section>
+
+    </div>
+
+    <section class="painel" aria-labelledby="metas">
+      <h2 id="metas">Metas Hospitalares</h2>
+      <iframe
+        src="https://app.powerbi.com/view?r=eyJrIjoiM2MzNzVkZWUtYzk0MS00YWQzLWI0OGItNzUzZjRhZmIzZWE2IiwidCI6ImNiYTQyYjlmLTM2MmUtNGQ5MC04NGU2LTA3MzkyYTdiMTNjMyJ9"
+        title="PB Saúde - Metas Hospitalares 2023"
+        loading="lazy"
+        allowfullscreen></iframe>
+    </section>
+  </main>
+
+  <script>
+    // Garante que todos os links abram em uma nova guia, de forma segura.
+    document.querySelectorAll("a[href]").forEach((link) => {
+      link.target = "_blank";
+      link.rel = "noopener noreferrer";
+    });
+  </script>
+</body>
+</html>

@@ -4,6 +4,8 @@ Aplicação web construída com [Next.js](https://nextjs.org) (App Router), Reac
 
 Os textos são provisórios e ficam em `src/content/home.ts`. Todas as imagens são provisórias: usam o componente `Placeholder` (`src/components/ui/Placeholder.tsx`). Para trocar por uma imagem real, passe a prop `src` (por exemplo, `<Placeholder src="/hero.webp" alt="..." />`) com o arquivo em `public/`. O formulário de contato ainda não envia dados.
 
+Além do app Next.js, o repositório traz o `transparencia.html`: uma página estática independente (HTML + CSS, sem build) com a lista de contratos de gestão, relatórios e controles de unidades de saúde, mais um painel Power BI incorporado. Ela não faz parte do app; basta abri-la no navegador. Os links `resolveuid/...` e `prestacao-de-contas/...` são relativos ao portal de origem e só funcionam se a página for publicada no mesmo servidor ou se receberem o domínio como prefixo.
+
 ## Stack
 
 | Tecnologia | Versão | Uso |
@@ -57,6 +59,10 @@ projeto1/
 │   │   └── ui/             # Button, Placeholder, Section, Testimonial
 │   └── content/
 │       └── home.ts         # Textos da página inicial
+├── .agents/                # Skills para agentes de IA (ex.: ui-ux-pro-max)
+├── .claude/                # Regras do projeto para o Claude Code
+├── transparencia.html      # Página estática independente (fora do app Next.js)
+├── skills-lock.json        # Versões travadas das skills instaladas
 ├── AGENTS.md               # Instruções para agentes de IA
 ├── CLAUDE.md               # Diretrizes para o Claude Code
 ├── eslint.config.mjs       # Configuração do ESLint
